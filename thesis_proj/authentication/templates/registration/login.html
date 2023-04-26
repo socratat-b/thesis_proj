@@ -1,0 +1,13 @@
+{% extends 'authentication/base.html' %}
+<!-- title of the html -->
+{% block title %}Log In{% endblock title %}
+<!-- Content of the log in html -->
+
+{% block content %}
+
+<form action="{% url 'login'%}" method="POST">
+  {%csrf_token%} {{form.as_p}}
+  <button class="" type="submit">Login</button>
+</form>
+
+{% endblock content %}
